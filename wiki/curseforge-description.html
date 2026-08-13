@@ -1,0 +1,50 @@
+<h1>Inventory Sorter Buttons &mdash; Inventory Tweaks, Revived</h1>
+<p><strong>The classic chest sorting buttons are back &mdash; on every GUI, from every mod.</strong></p>
+<p>Inventory Sorter Buttons is a faithful revival of <strong>Inventory Tweaks</strong> (the Tekkit Classic era, 1.41b) for modern <strong>Forge 1.19.2</strong>. The same 10&times;10 buttons with the same pixel-drawn glyphs, the same settings screens, the same rules and item tree files &mdash; rebuilt from the ground up with server-authoritative sorting that works on any mod's containers.</p>
+<hr>
+<h2>&#10022; The Buttons</h2>
+<p>Four little buttons on every chest-like GUI, exactly where you remember them:</p>
+<ul>
+<li><strong>z</strong> &mdash; sort (merge stacks, order by category)</li>
+<li><strong>||</strong> &mdash; sort in columns (each item type gets its own column)</li>
+<li><strong>=</strong> &mdash; sort in rows (each item type gets its own row)</li>
+<li><strong>...</strong> &mdash; open the settings screen</li>
+</ul>
+<p><strong>Vanilla GUIs</strong> get the classic horizontal row in the top-right corner. <strong>Modded GUIs</strong> &mdash; Iron Chests, storage mods, machine buffers, anything &mdash; get the classic vertical column off the left edge. Any menu with 9+ freely-usable container slots qualifies automatically, no per-mod support needed.</p>
+<h2>&#10022; Sorting Everywhere</h2>
+<ul>
+<li><strong>Middle-click</strong> any container to sort it &mdash; hover your own inventory to sort that instead</li>
+<li><strong>R</strong> sorts your main inventory (rebindable in Controls), in and out of GUIs</li>
+<li>Your <strong>hotbar is never touched</strong>, just like the original's <code>D LOCKED</code> rule</li>
+<li>Sorting runs <strong>on the server</strong> through each menu's own slots, so it's safe with any mod's containers and on dedicated servers &mdash; no client-side click simulation</li>
+</ul>
+<h2>&#10022; The Classic Extras</h2>
+<ul>
+<li><strong>Auto-refill</strong> &mdash; when a hotbar stack runs out or a tool breaks, it refills from your inventory</li>
+<li><strong>Shortcuts</strong> &mdash; the original mappings: <strong>Ctrl+Click</strong> moves one item, <strong>Ctrl+Shift+Click</strong> moves all stacks of that item, <strong>Space+Click</strong> moves everything in that section, <strong>Alt+Click</strong> drops the whole stack</li>
+<li><strong>Sort on pickup</strong> and <strong>auto-equip armor</strong> &mdash; the "More options..." page is all here, PvP warning included</li>
+<li>Every feature has its toggle in the recreated <strong>"Inventory and chests settings"</strong> screen</li>
+</ul>
+<h2>&#10022; Rules &amp; Item Tree Files</h2>
+<p>The heart of Inventory Tweaks, modernized:</p>
+<ul>
+<li><strong><code>InvSortButtonsRules.txt</code></strong> &mdash; the same grid rules you remember: <code>A food</code> fills the top row with food, <code>1 pickaxe</code> fills the first column, <code>A1-C4 block</code>, <code>B FROZEN</code>... plus modern keywords: registry names (<code>A1 minecraft:cobblestone</code>) and item tags (<code>B #forge:ores</code>).</li>
+<li><strong><code>InvSortButtonsTree.txt</code></strong> &mdash; the same XML item tree, but leaves match by registry name, item tag, or item class (<code>class="sword"</code> matches every sword from every mod), so modded items categorize themselves.</li>
+<li>Edit a file, press the sort key, and it reloads &mdash; exactly like the original. On multiplayer, <strong>every player gets their own rules</strong>, synced automatically.</li>
+<li>Broke a file? Delete it and the default regenerates.</li>
+</ul>
+<h2>&#10022; For Modders</h2>
+<p>A small stable API (<code>com.invsortbuttons.api</code>) lets you put our buttons <strong>right inside your own GUI</strong>: implement <code>ISortButtonHost</code> on your screen to anchor the button strip wherever you want (or hide it), implement <code>ISortableMenu</code> on your menu to define exactly which slots are sortable (or opt out), and call <code>InvSortButtonsApi.sortOpenContainer(mode)</code> to trigger sorts yourself. Full documentation is on the wiki.</p>
+<h2>&#10022; Requirements</h2>
+<ul>
+<li>Minecraft <strong>1.19.2</strong></li>
+<li>Forge <strong>43+</strong></li>
+<li>Install on <strong>both client and server</strong> (needed for server-side sorting)</li>
+<li>No other dependencies</li>
+</ul>
+<hr>
+<h2>&#10022; Credits</h2>
+<ul>
+<li><strong>Jimeo Wan (Marwane Kalam-Alami)</strong> &mdash; creator of <strong>Inventory Tweaks</strong>, one of the most beloved quality-of-life mods ever made. The buttons, glyphs, layouts, sorting algorithms, settings screens, and config file formats here are all recreated from Inventory Tweaks 1.41b. The original was released under the <strong>MIT license</strong>, which is what makes this faithful recreation possible &mdash; thank you.</li>
+</ul>
+<p><em>Sort everything. Everywhere. Again.</em></p>

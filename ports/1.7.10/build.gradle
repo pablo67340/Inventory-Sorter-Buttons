@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+    id 'com.gtnewhorizons.retrofuturagradle' version '1.4.9'
+}
+
+version = '1.7.10-1.0.0'
+group = 'com.invsortbuttons'
+
+base {
+    archivesName = 'invsortbuttons'
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(8)
+    }
+}
+
+minecraft {
+    mcVersion = '1.7.10'
+    mcpMappingChannel = 'stable'
+    mcpMappingVersion = '12'
+    username = 'Developer'
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}

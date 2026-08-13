@@ -1,0 +1,34 @@
+# eclipse
+bin
+*.launch
+.settings
+.metadata
+.classpath
+.project
+
+# idea
+out
+*.ipr
+*.iws
+*.iml
+.idea
+
+# gradle
+build
+.gradle
+
+# other
+eclipse
+run
+
+# Files from Forge MDK
+forge*changelog.txt
+
+# Original-mod jars and decompiled reference material — not redistributable
+reference/
+
+# Local-only dev-time jars and tooling
+libs/
+tools/
+
+*.log

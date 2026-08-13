@@ -1,0 +1,16 @@
+pluginManagement {
+    repositories {
+        maven {
+            name = 'GTNH Maven'
+            url = uri('https://nexus.gtnewhorizons.com/repository/public/')
+        }
+        gradlePluginPortal()
+        mavenCentral()
+    }
+}
+
+plugins {
+    id 'org.gradle.toolchains.foojay-resolver-convention' version '0.8.0'
+}
+
+rootProject.name = 'invsortbuttons-1.7.10'

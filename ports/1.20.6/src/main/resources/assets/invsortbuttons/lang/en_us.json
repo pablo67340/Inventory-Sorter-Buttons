@@ -1,0 +1,36 @@
+{
+  "key.categories.invsortbuttons": "Inventory Sorter Buttons",
+  "key.invsortbuttons.sort": "Sort Inventory",
+
+  "invsortbuttons.tooltip.settings": "Inventory settings",
+  "invsortbuttons.tooltip.sort_default": "Sort",
+  "invsortbuttons.tooltip.sort_vertical": "Sort in columns",
+  "invsortbuttons.tooltip.sort_horizontal": "Sort in rows",
+
+  "invsortbuttons.settings.title": "Inventory and chests settings",
+  "invsortbuttons.settings.shortcuts": "Shortcuts",
+  "invsortbuttons.settings.middleclick": "Middle click",
+  "invsortbuttons.settings.chestbuttons": "Chest buttons",
+  "invsortbuttons.settings.autorefill": "Auto-refill",
+  "invsortbuttons.settings.moreoptions": "More options...",
+  "invsortbuttons.settings.rulesfile": "Open the sorting rules file...",
+  "invsortbuttons.settings.treefile": "Open the item tree file...",
+  "invsortbuttons.settings.onlinehelp": "Open help in browser...",
+  "invsortbuttons.settings.notavailable": "Not part of this recreation (yet!)",
+  "invsortbuttons.settings.autoequip": "Auto-equip armor",
+  "invsortbuttons.settings.sortonpickup": "Sort on pickup",
+  "invsortbuttons.settings.sounds": "Enable sound",
+  "invsortbuttons.settings.shortcutsfile": "Open the shortcuts mappings file...",
+  "invsortbuttons.settings.pvpnote1": "Note: On PvP servers, the auto-refill & auto-equip armor",
+  "invsortbuttons.settings.pvpnote2": "options are often considered cheating!",
+
+  "invsortbuttons.help.title": "Shortcuts",
+  "invsortbuttons.help.buttons": "Chest buttons: z = sort, || = sort in columns, = = sort in rows",
+  "invsortbuttons.help.middleclick": "Middle click: sort the chest (or your inventory when hovering it)",
+  "invsortbuttons.help.sortkey": "R: sort your main inventory",
+  "invsortbuttons.help.drop": "Alt + Click: drop the whole stack",
+  "invsortbuttons.help.oneitem": "Ctrl + Click: move one item to the other section",
+  "invsortbuttons.help.alloftype": "Ctrl + Shift + Click: move all stacks of that item",
+  "invsortbuttons.help.everything": "Space + Click: move everything in that section",
+  "invsortbuttons.help.refill": "Auto-refill: an emptied hotbar slot refills from your inventory"
+}

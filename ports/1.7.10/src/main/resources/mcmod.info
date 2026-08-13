@@ -1,0 +1,16 @@
+[
+{
+  "modid": "invsortbuttons",
+  "name": "Inventory Sorter Buttons",
+  "description": "A tribute to Inventory Tweaks: adds the classic s/v/h sorting buttons and settings screen to any chest GUI, with sorting rules, item tree and click shortcuts.",
+  "version": "1.0.0",
+  "mcversion": "1.7.10",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Bryce"],
+  "credits": "A tribute to Inventory Tweaks by Jimeo Wan / Marwane Kalam-Alami (MIT)",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
