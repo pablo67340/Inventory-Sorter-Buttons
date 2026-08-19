@@ -13,6 +13,11 @@ base {
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(21)
 
+// Merge resources into the classes dir so the dev-time mod loader sees one
+// directory containing both mods.toml and the classes; without this the two
+// output dirs are treated as separate broken mod files
+sourceSets.main.output.resourcesDir = sourceSets.main.java.classesDirectory
+
 println "Java: ${System.getProperty 'java.version'}, JVM: ${System.getProperty 'java.vm.version'} (${System.getProperty 'java.vendor'}), Arch: ${System.getProperty 'os.arch'}"
 minecraft {
     mappings channel: mapping_channel, version: mapping_version
