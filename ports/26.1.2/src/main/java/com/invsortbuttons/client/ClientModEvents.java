@@ -9,7 +9,9 @@ import net.minecraftforge.eventbus.api.listener.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import org.lwjgl.glfw.GLFW;
 
-@Mod.EventBusSubscriber(modid = InvSortButtons.MOD_ID, value = Dist.CLIENT, bus = Mod.EventBusSubscriber.Bus.MOD)
+// RegisterKeyMappingsEvent is no longer a mod-bus event in Forge 26.x's
+// EventBus 7; it fires on the default game bus
+@Mod.EventBusSubscriber(modid = InvSortButtons.MOD_ID, value = Dist.CLIENT)
 public final class ClientModEvents {
     public static final KeyMapping SORT_KEY = new KeyMapping(
             "key.invsortbuttons.sort", InputConstants.Type.KEYSYM, GLFW.GLFW_KEY_R,
