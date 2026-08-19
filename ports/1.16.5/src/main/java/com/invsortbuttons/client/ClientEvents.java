@@ -156,12 +156,14 @@ public final class ClientEvents {
                 event.addWidget(new SortingIconButton(x, y + 26, 'v', SortPacket.MODE_VERTICAL, tipV));
                 event.addWidget(new SortingIconButton(x, y + 39, 's', SortPacket.MODE_DEFAULT, tipS));
                 event.addWidget(new MoveAllIconButton(x, y + 52, false, tipTake));
+                event.addWidget(new MoveAllIconButton(x, y + 65, true, tipPut));
             }
         }
 
-        // Put-all lives at the top-right of the player inventory section, since
-        // that's the section it acts on
-        if (ISBConfig.CHEST_BUTTONS.get()) {
+        // In row (vanilla) layouts, Put-all lives at the top-right of the player
+        // inventory section, since that's the section it acts on. Modded GUIs can
+        // pack slots right up to that spot, so there it stays in the column.
+        if (row && ISBConfig.CHEST_BUTTONS.get()) {
             int invMaxX = Integer.MIN_VALUE;
             int invMinY = Integer.MAX_VALUE;
             for (Slot s : screen.getMenu().slots) {
