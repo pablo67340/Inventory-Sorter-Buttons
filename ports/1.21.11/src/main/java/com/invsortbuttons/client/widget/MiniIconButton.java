@@ -7,9 +7,10 @@ import net.minecraft.client.gui.narration.NarrationElementOutput;
 import net.minecraft.network.chat.Component;
 
 /**
- * Port of InvTweaksGuiIconButton (MIT): a 10x10 mini button. On modern
- * versions the vanilla button background is nine-sliced and drawn by
- * AbstractButton itself, so only the icon needs custom rendering.
+ * Port of InvTweaksGuiIconButton (MIT): a 10x10 mini button. In 1.21.11,
+ * AbstractButton no longer draws its background sprite automatically —
+ * renderContents must call renderDefaultSprite itself (like vanilla
+ * Button does), then draw the icon on top.
  */
 public abstract class MiniIconButton extends AbstractButton {
     private final Component tooltip;
@@ -26,6 +27,7 @@ public abstract class MiniIconButton extends AbstractButton {
 
     @Override
     protected void renderContents(GuiGraphics graphics, int mouseX, int mouseY, float partialTick) {
+        this.renderDefaultSprite(graphics);
         this.drawIcon(graphics, this.getIconColor(mouseX, mouseY));
     }
 

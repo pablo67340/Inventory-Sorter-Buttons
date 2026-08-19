@@ -15,6 +15,11 @@ base {
 // Mojang ships Java 21 to end users in 1.20.5+
 java.toolchain.languageVersion = JavaLanguageVersion.of(21)
 
+// Merge resources into the classes dir so the dev-time mod loader sees one
+// directory containing both mods.toml and the classes; without this the two
+// output dirs are treated as separate broken mod files
+sourceSets.main.output.resourcesDir = sourceSets.main.java.classesDirectory
+
 minecraft {
     mappings channel: mapping_channel, version: mapping_version
 
