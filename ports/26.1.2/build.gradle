@@ -15,6 +15,11 @@ base {
 // Mojang ships Java 25 to end users in 26.1+
 java.toolchain.languageVersion = JavaLanguageVersion.of(25)
 
+// Merge resources into the classes dir so the dev-time mod loader sees one
+// directory containing both mods.toml and the classes; without this the two
+// output dirs are treated as separate broken mod files
+sourceSets.main.output.resourcesDir = sourceSets.main.java.classesDirectory
+
 minecraft {
     runs {
         configureEach {
