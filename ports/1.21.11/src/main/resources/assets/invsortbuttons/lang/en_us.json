@@ -6,6 +6,8 @@
   "invsortbuttons.tooltip.sort_default": "Sort",
   "invsortbuttons.tooltip.sort_vertical": "Sort in columns",
   "invsortbuttons.tooltip.sort_horizontal": "Sort in rows",
+  "invsortbuttons.tooltip.put_all": "Put all items into the container (Shift: include hotbar)",
+  "invsortbuttons.tooltip.take_all": "Take all items from the container",
 
   "invsortbuttons.settings.title": "Inventory and chests settings",
   "invsortbuttons.settings.shortcuts": "Shortcuts",
@@ -26,6 +28,7 @@
 
   "invsortbuttons.help.title": "Shortcuts",
   "invsortbuttons.help.buttons": "Chest buttons: z = sort, || = sort in columns, = = sort in rows",
+  "invsortbuttons.help.moveall": "Arrow buttons: up = put all into the chest, down = take all out",
   "invsortbuttons.help.middleclick": "Middle click: sort the chest (or your inventory when hovering it)",
   "invsortbuttons.help.sortkey": "R: sort your main inventory",
   "invsortbuttons.help.drop": "Alt + Click: drop the whole stack",

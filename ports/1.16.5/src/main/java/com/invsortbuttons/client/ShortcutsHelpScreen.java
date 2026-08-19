@@ -9,6 +9,7 @@ import net.minecraft.util.text.TranslationTextComponent;
 public class ShortcutsHelpScreen extends Screen {
     private static final String[] LINES = {
             "invsortbuttons.help.buttons",
+            "invsortbuttons.help.moveall",
             "invsortbuttons.help.middleclick",
             "invsortbuttons.help.sortkey",
             "invsortbuttons.help.drop",

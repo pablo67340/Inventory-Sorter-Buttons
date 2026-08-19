@@ -2,6 +2,7 @@ package com.invsortbuttons.client;
 
 import com.invsortbuttons.ISBConfig;
 import com.invsortbuttons.InvSortButtons;
+import com.invsortbuttons.client.widget.MoveAllIconButton;
 import com.invsortbuttons.client.widget.SettingsIconButton;
 import com.invsortbuttons.client.widget.SortingIconButton;
 import com.invsortbuttons.network.NetworkHandler;
@@ -101,6 +102,8 @@ public final class ClientEvents {
         Component tipH = Component.translatable("invsortbuttons.tooltip.sort_horizontal");
         Component tipV = Component.translatable("invsortbuttons.tooltip.sort_vertical");
         Component tipS = Component.translatable("invsortbuttons.tooltip.sort_default");
+        Component tipPut = Component.translatable("invsortbuttons.tooltip.put_all");
+        Component tipTake = Component.translatable("invsortbuttons.tooltip.take_all");
 
         boolean row;
         int x;
@@ -126,20 +129,38 @@ public final class ClientEvents {
         }
 
         if (row) {
-            // Left to right: z, ||, =, ...
+            // Left to right: down, z, ||, =, ...
             if (ISBConfig.CHEST_BUTTONS.get()) {
+                event.addListener(new MoveAllIconButton(x - 12, y, false, tipTake));
                 event.addListener(new SortingIconButton(x, y, 's', SortPacket.MODE_DEFAULT, tipS));
                 event.addListener(new SortingIconButton(x + 12, y, 'v', SortPacket.MODE_VERTICAL, tipV));
                 event.addListener(new SortingIconButton(x + 24, y, 'h', SortPacket.MODE_HORIZONTAL, tipH));
             }
             event.addListener(new SettingsIconButton(x + 36, y, tipSettings));
         } else {
-            // Top to bottom: ..., =, ||, z
+            // Top to bottom: ..., =, ||, z, down
             event.addListener(new SettingsIconButton(x, y, tipSettings));
             if (ISBConfig.CHEST_BUTTONS.get()) {
                 event.addListener(new SortingIconButton(x, y + 13, 'h', SortPacket.MODE_HORIZONTAL, tipH));
                 event.addListener(new SortingIconButton(x, y + 26, 'v', SortPacket.MODE_VERTICAL, tipV));
                 event.addListener(new SortingIconButton(x, y + 39, 's', SortPacket.MODE_DEFAULT, tipS));
+                event.addListener(new MoveAllIconButton(x, y + 52, false, tipTake));
+            }
+        }
+
+        // Put-all lives at the top-right of the player inventory section, since
+        // that's the section it acts on
+        if (ISBConfig.CHEST_BUTTONS.get()) {
+            int invMaxX = Integer.MIN_VALUE;
+            int invMinY = Integer.MAX_VALUE;
+            for (Slot s : screen.getMenu().slots) {
+                if (SortEngine.isPlayerSlot(s, mc.player.getInventory())) {
+                    invMaxX = Math.max(invMaxX, s.x);
+                    invMinY = Math.min(invMinY, s.y);
+                }
+            }
+            if (invMaxX != Integer.MIN_VALUE) {
+                event.addListener(new MoveAllIconButton(left + invMaxX + 6, top + invMinY - 13, true, tipPut));
             }
         }
     }

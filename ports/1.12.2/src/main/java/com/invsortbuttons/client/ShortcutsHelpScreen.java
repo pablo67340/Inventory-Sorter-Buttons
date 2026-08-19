@@ -8,6 +8,7 @@ import net.minecraft.client.resources.I18n;
 public class ShortcutsHelpScreen extends GuiScreen {
     private static final String[] LINES = {
             "invsortbuttons.help.buttons",
+            "invsortbuttons.help.moveall",
             "invsortbuttons.help.middleclick",
             "invsortbuttons.help.sortkey",
             "invsortbuttons.help.drop",
