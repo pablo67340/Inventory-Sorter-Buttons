@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+|==============================================================|
+| INVENTORY SORTER BUTTONS - a tribute to Inventory Tweaks     |
+| Item tree configuration                                      |
+|==============================================================|
+
+# Q: WHAT IS THIS?
+# A: This file stores all the keywords you can use to create sorting rules,
+# and defines the item sort order (top to bottom = first to last).
+# You can move/change anything you want.
+#
+# Unlike the original mod, entries match modern items three ways:
+#   id="minecraft:cobblestone"     exact item registry name
+#   tag="forge:ores"               any item in that item tag (great for mods!)
+#   class="sword"                  item kind. Available classes: sword, bow,
+#     crossbow, trident, pickaxe, shovel, axe, hoe, tool, shears, fishingrod,
+#     flintandsteel, helmet, chestplate, leggings, boots, armor, shield, food,
+#     potion, bucket, minecart, boat, record, block
+#
+# Q: THE FILE IS BROKEN AND I DON'T KNOW WHAT TO DO =(
+# A: Just delete this file, the default tree will be regenerated
+# next time the game starts!
+-->
+<!-- Note: 'stuff' matches everything, even items that don't appear here -->
+<stuff treeVersion="2.0.0">
+  <equipment>
+    <weapon>
+      <sword class="sword" />
+      <munition>
+        <bow class="bow" />
+        <crossbow class="crossbow" />
+        <trident class="trident" />
+        <arrow tag="minecraft:arrows" />
+        <snowball id="minecraft:snowball" />
+      </munition>
+    </weapon>
+    <tool>
+      <pickaxe class="pickaxe" />
+      <shovel class="shovel" />
+      <axe class="axe" />
+      <hoe class="hoe" />
+      <shears class="shears" />
+      <fishingRod class="fishingrod" />
+      <flintAndSteel class="flintandsteel" />
+      <otherTool class="tool" />
+    </tool>
+    <armor>
+      <helmet class="helmet" />
+      <chestplate class="chestplate" />
+      <leggings class="leggings" />
+      <boots class="boots" />
+      <shield class="shield" />
+    </armor>
+  </equipment>
+  <block>
+    <naturalBlock>
+      <stones>
+        <stone id="minecraft:stone" />
+        <cobblestone id="minecraft:cobblestone" />
+        <deepslate id="minecraft:deepslate" />
+        <cobbledDeepslate id="minecraft:cobbled_deepslate" />
+        <netherrack id="minecraft:netherrack" />
+        <endStone id="minecraft:end_stone" />
+      </stones>
+      <oreBlock tag="forge:ores" />
+      <dirt tag="minecraft:dirt" />
+      <wood tag="minecraft:logs" />
+      <sand tag="minecraft:sand" />
+      <gravel id="minecraft:gravel" />
+      <leaves tag="minecraft:leaves" />
+      <sapling tag="minecraft:saplings" />
+    </naturalBlock>
+    <craftedBlock>
+      <planks tag="minecraft:planks" />
+      <glass tag="forge:glass" />
+      <wool tag="minecraft:wool" />
+      <storageBlock tag="forge:storage_blocks" />
+      <stairs tag="minecraft:stairs" />
+      <slabs tag="minecraft:slabs" />
+      <fences tag="minecraft:fences" />
+    </craftedBlock>
+    <mechanism>
+      <rails tag="minecraft:rails" />
+      <torch id="minecraft:torch" />
+      <chest tag="forge:chests" />
+    </mechanism>
+    <otherBlock class="block" />
+  </block>
+  <food class="food" />
+  <item>
+    <material>
+      <coal id="minecraft:coal" />
+      <charcoal id="minecraft:charcoal" />
+      <rawMaterial tag="forge:raw_materials" />
+      <ingot tag="forge:ingots" />
+      <nugget tag="forge:nuggets" />
+      <gem tag="forge:gems" />
+      <dust tag="forge:dusts" />
+      <redstone id="minecraft:redstone" />
+      <stick tag="forge:rods/wooden" />
+      <leather tag="forge:leather" />
+      <string tag="forge:string" />
+      <bone id="minecraft:bone" />
+      <gunpowder id="minecraft:gunpowder" />
+      <enderPearl tag="forge:ender_pearls" />
+      <slimeball tag="forge:slimeballs" />
+    </material>
+    <potion class="potion" />
+    <bucket class="bucket" />
+    <transport>
+      <minecart class="minecart" />
+      <boat class="boat" />
+    </transport>
+    <record class="record" />
+  </item>
+</stuff>

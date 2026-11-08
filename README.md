@@ -52,9 +52,10 @@ non-player slots gets buttons.
 
 ## Requirements
 
-- Minecraft 1.7.10, 1.12.2, 1.16.5, 1.19.2, 1.20.6, 1.21.11, 26.1.2 or 26.2,
-  with the matching Forge (this repo's root project is 1.19.2; the other
-  versions live in `ports/`)
+- Minecraft 1.7.10, 1.12.2, 1.16.5, 1.19.2, 1.20.6, 1.21.1, 1.21.11, 26.1.2
+  or 26.2, with the matching Forge, or NeoForge on 1.21.1 (this repo's root
+  project is 1.19.2; the other versions live in `ports/`, with the NeoForge
+  build in `ports/1.21.1-neoforge`)
 - Install on both client and server
 
 ## Build

@@ -9,8 +9,12 @@
   Take All; in vanilla GUIs it stays at the top-right of your inventory
   section.
 
-Available for Minecraft 1.7.10, 1.12.2, 1.16.5, 1.19.2, 1.20.6, 1.21.11,
-26.1.2 and 26.2 (Forge, client + server).
+## New
+
+- **Minecraft 1.21.1 builds for Forge and NeoForge.**
+
+Available for Minecraft 1.7.10, 1.12.2, 1.16.5, 1.19.2, 1.20.6, 1.21.1,
+1.21.11, 26.1.2 and 26.2 (Forge, plus NeoForge on 1.21.1; client + server).
 
 ---
 

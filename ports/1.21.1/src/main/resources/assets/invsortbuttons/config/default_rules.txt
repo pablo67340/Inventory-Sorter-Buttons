@@ -1,0 +1,40 @@
+|==============================================================|
+| INVENTORY SORTER BUTTONS - a tribute to Inventory Tweaks     |
+| Sorting rules configuration                                  |
+|==============================================================|
+
+====== [ SETTINGS ] ======
+
+D LOCKED
+
+======== [ GETTING STARTED ] ========
+
+# SORTING RULES
+# Each line you type is a new constraint you add for sorting your inventory.
+# After any change, just press the sorting key (R) to reload the settings. Some examples:
+# * "D1 sword" puts any sword in row D, column 1 (see grid below)
+# * "A food" fills the A row with food
+# * "1 pickaxe" fills the 1 column with pickaxes
+# * "A1-C4 block" fills the rectangle with any blocks
+# * "D LOCKED" avoids items from the hotbar to move out of it when sorting
+# * "B FROZEN" leaves row B exactly as it is when sorting
+
+# INVENTORY GRID
+#     1   2   3   4   5   6   7   8   9
+# A [A1][A2][A3][A4][A5][A6][A7][A8][A9]
+# B [B1][B2][B3][B4][B5][B6][B7][B8][B9]
+# C [C1][C2][C3][C4][C5][C6][C7][C8][C9]
+#
+# D [D1][D2][D3][D4][D5][D6][D7][D8][D9]
+#
+# Note: this recreation never moves your hotbar (row D) while sorting,
+# so row D is effectively always LOCKED.
+
+# AVAILABLE KEYWORDS
+# Open 'InvSortButtonsTree.txt' for the list of available keywords. You can
+# also use registry names or item tags directly. Examples:
+# * "A1 minecraft:cobblestone"
+# * "B forge:ores" is not a keyword, tags need a # prefix: "B #forge:ores"
+
+# ORIGINAL MOD & DOCUMENTATION
+# Inventory Tweaks by Jimeo Wan (MIT), recreated for modern Forge.
